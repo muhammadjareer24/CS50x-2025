@@ -1,0 +1,26 @@
+HTML tags:
+nav
+p
+h1
+section
+li
+ul
+span
+button
+a
+div
+img
+
+
+CSS properties:
+height
+max-width
+font-weight
+padding
+text-align
+font-size
+margin-bottom
+
+Bootstrap: Used it to add different styled components in my website.. like Form, Card, Navbar etc..
+
+JavaScript: Used it to have interaction in contact page's form... when submit button is clicked, button's bg color and text would change to show the user that form is submitted...

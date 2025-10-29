@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+        <script>
+
+            document.addEventListener("DOMContentLoaded", ()=> {
+
+                let feedbackQ1Mcq = document.querySelector(".feedback-q1-mcq")
+
+                let correct = document.querySelector(".correct")
+                correct.addEventListener("click", ()=> {
+                correct.style.backgroundColor = "green"
+                feedbackQ1Mcq.innerHTML = "Correct 👏"
+                })
+
+                let incorrect = document.querySelectorAll(".incorrect")
+                for (let i = 0; i < incorrect.length; i++){
+                    incorrect[i].addEventListener("click", ()=> {
+                        incorrect[i].style.backgroundColor = "red"
+                        feedbackQ1Mcq.innerHTML = "Incorrect ❌"
+                    })
+                }
+
+                let checkBtn = document.querySelector(".check-btn")
+                let input = document.querySelector("input")
+                let feedbackQ1Fr = document.querySelector(".feedback-q1-fr")
+
+                checkBtn.addEventListener("click", ()=> {
+                    if(input.value.trim().toLowerCase() === "hypertext transfer protocol"){
+                        checkBtn.style.backgroundColor = "green"
+                        feedbackQ1Fr.innerHTML = "Correct 👏"
+                    } else {
+                        checkBtn.style.backgroundColor = "red"
+                        feedbackQ1Fr.innerHTML = "Incorrect ❌"
+                    }
+
+                })
+            })
+
+        </script>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                 <h3 class="q1-mcq">
+                    Q1. Which of the following is not an example of an operating system?
+                 </h3>
+                    <button class="incorrect">Linux</button>
+                    <button class="incorrect">Windows</button>
+                    <button class="correct">Oracle</button>
+                    <button class="incorrect">macOS</button>
+
+                    <p class="feedback-q1-mcq"></p>
+
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3 class="q1-fr">
+                    Q1. What does HTTP stand for?
+                </h3>
+                <input type="text" autocomplete="off" placeholder="Type your answer">
+                <button class="check-btn">Check Answer</button>
+
+                <p class="feedback-q1-fr"></p>
+            </div>
+        </div>
+    </body>
+</html>
