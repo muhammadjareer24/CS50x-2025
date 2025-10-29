@@ -1,0 +1,4 @@
+1. Avg energy 0.65906, danceability 0.71646, valence 0.484443 suggest that audio aura is lively and rhythmic, favoring moderately high-energy and highly danceable tracks.The mid-range valence suggests a balance between upbeat songs and more emotionally nuanced ones.
+
+
+2. This method isn’t perfect because it treats all songs the same, ignores play counts, and flattens mood variety into one average. A better approach would weight by plays and group songs by mood.
