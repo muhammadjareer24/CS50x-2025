@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Quote Result
+{% endblock %}
+
+
+{% block main %}
+    <h1 class="mb-5">Quote Result</h1>
+    <p class="mb-1"> <strong>Stock:</strong> {{ stock.name }}</p>
+    <p class="mb-1"> <strong>Symbol:</strong> {{ stock.symbol }}</p>
+    <p class="mb-2"> <strong>Price:</strong> {{ "%.2f"|format (stock.price) }}</p>
+    <a href="/quote" class="btn btn-primary">Lookup Another Stock</a>
+{% endblock %}
+
